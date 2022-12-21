@@ -3,9 +3,10 @@ import type Post from "../interfaces/post";
 
 type Props = {
   posts: Post[];
+  dir: string;
 };
 
-const AllStories = ({ posts }: Props) => {
+const AllStories = ({ posts, dir = "posts" }: Props) => {
   return (
     <section>
       <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
@@ -21,6 +22,7 @@ const AllStories = ({ posts }: Props) => {
             author={post.author}
             slug={post.slug}
             excerpt={post.excerpt}
+            dir={dir}
           />
         ))}
       </div>

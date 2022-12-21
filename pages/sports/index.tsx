@@ -17,7 +17,7 @@ export default function Index({ allPosts }: Props) {
           <title> All posts</title>
         </Head>
         <Container>
-          {allPosts.length > 0 && <AllStories posts={allPosts} dir="posts" />}
+          {allPosts.length > 0 && <AllStories posts={allPosts} dir="sports" />}
         </Container>
       </Layout>
     </>
@@ -25,7 +25,7 @@ export default function Index({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const directory = "_posts";
+  const directory = "_sports";
   const allPosts = getAllPosts(
     ["title", "date", "slug", "author", "coverImage", "excerpt"],
     directory

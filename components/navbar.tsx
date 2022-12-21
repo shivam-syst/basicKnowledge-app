@@ -66,19 +66,19 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                  href="#pablo"
+                  href="/sports"
                 >
                   <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i>
-                  <span className="ml-2">Share</span>
+                  <span className="ml-2">Sports</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                  href="#"
+                  href="/politics"
                 >
                   <i className="fab fa-pinterest text-lg leading-lg text-black opacity-75"></i>
-                  <span className="ml-2">Contact Us</span>
+                  <span className="ml-2">Politics</span>
                 </Link>
               </li>
             </ul>
