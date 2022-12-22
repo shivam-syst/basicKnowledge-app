@@ -3,6 +3,14 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const MENUS = [
+    { menuName: "All Posts", path: "/posts" },
+    { menuName: "Education", path: "/education" },
+    { menuName: "Sports", path: "/sports" },
+    { menuName: "Politics", path: "/politics" },
+    { menuName: "Sports", path: "/sports" },
+    { menuName: "Gadgets", path: "/gadget" },
+  ];
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-100 mb-3">
@@ -54,33 +62,18 @@ const Navbar = () => {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                  href="/posts"
-                >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-black opacity-75"></i>
-                  <span className="ml-2">All Posts</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                  href="/sports"
-                >
-                  <i className="fab fa-twitter text-lg leading-lg text-black opacity-75"></i>
-                  <span className="ml-2">Sports</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                  href="/politics"
-                >
-                  <i className="fab fa-pinterest text-lg leading-lg text-black opacity-75"></i>
-                  <span className="ml-2">Politics</span>
-                </Link>
-              </li>
+              {MENUS.map((menu) => {
+                return (
+                  <li className="nav-item">
+                    <Link
+                      className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                      href={menu.path}
+                    >
+                      <span className="ml-2">{menu.menuName}</span>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
