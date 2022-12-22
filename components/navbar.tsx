@@ -6,7 +6,6 @@ const Navbar = () => {
   const MENUS = [
     { menuName: "All Posts", path: "/posts" },
     { menuName: "Education", path: "/education" },
-    { menuName: "Sports", path: "/sports" },
     { menuName: "Politics", path: "/politics" },
     { menuName: "Sports", path: "/sports" },
     { menuName: "Gadgets", path: "/gadget" },
