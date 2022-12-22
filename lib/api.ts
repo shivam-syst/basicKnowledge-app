@@ -5,7 +5,7 @@ import matter from "gray-matter";
 // const postsDirectory = join(process.cwd(), "_posts");
 // const sportsDirectory = join(process.cwd(), "_sports");
 
-export function getPostSlugs(directory: any) {
+export function getPostSlugs(directory: string) {
   return fs.readdirSync(directory);
 }
 
