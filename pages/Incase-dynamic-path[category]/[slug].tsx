@@ -50,49 +50,49 @@ export default function Post({ post, morePosts, preview }: Props) {
   );
 }
 
-type Params = {
-  params: {
-    category?: string;
-    slug: string;
-  };
-};
+// type Params = {
+//   params: {
+//     category?: string;
+//     slug: string;
+//   };
+// };
 
-export async function getStaticPaths({ queryParams }) {
-  const router = useRouter();
-  const category = router.query.category as string;
-  const slug = router.query.slug as string;
-  const posts = getAllPosts(["slug"], "_education");
-  console.log("posts", posts);
-  console.log(category, slug);
-  return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          category: queryParams,
-          slug: post.slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
-}
+// export async function getStaticPaths({ queryParams }) {
+//   const router = useRouter();
+//   const category = router.query.category as string;
+//   const slug = router.query.slug as string;
+//   const posts = getAllPosts(["slug"], "_education");
+//   console.log("posts", posts);
+//   console.log(category, slug);
+//   return {
+//     paths: posts.map((post) => {
+//       return {
+//         params: {
+//           category: queryParams,
+//           slug: post.slug,
+//         },
+//       };
+//     }),
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }: Params) {
-  const directory = params.category;
-  console.log(`Params:`, params);
-  const post = getPostBySlug(
-    params.slug,
-    ["title", "date", "slug", "author", "content", "ogImage", "coverImage"],
-    `_${directory}`
-  );
-  const content = await markdownToHtml(post.content || "");
+// export async function getStaticProps({ params }: Params) {
+//   const directory = params.category;
+//   console.log(`Params:`, params);
+//   const post = getPostBySlug(
+//     params.slug,
+//     ["title", "date", "slug", "author", "content", "ogImage", "coverImage"],
+//     `_${directory}`
+//   );
+//   const content = await markdownToHtml(post.content || "");
 
-  return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
-  };
-}
+//   return {
+//     props: {
+//       post: {
+//         ...post,
+//         content,
+//       },
+//     },
+//   };
+// }

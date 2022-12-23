@@ -25,28 +25,28 @@ export default function Index({ allPosts, directory: dir }: Props) {
   );
 }
 
-export const getStaticPaths = async () => {
-  const CATEGORIES = ["sports", "education", "politics", "gadget", "posts"];
-  return {
-    paths: CATEGORIES.map((category) => {
-      return {
-        params: {
-          category,
-        },
-      };
-    }),
-    fallback: false,
-  };
-};
+// export const getStaticPaths = async () => {
+//   const CATEGORIES = ["sports", "education", "politics", "gadget", "posts"];
+//   return {
+//     paths: CATEGORIES.map((category) => {
+//       return {
+//         params: {
+//           category,
+//         },
+//       };
+//     }),
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async ({ params }) => {
-  const directory = params.category;
-  const allPosts = getAllPosts(
-    ["title", "date", "slug", "author", "coverImage", "excerpt"],
-    `_${directory}`
-  );
+// export const getStaticProps = async ({ params }) => {
+//   const directory = params.category;
+//   const allPosts = getAllPosts(
+//     ["title", "date", "slug", "author", "coverImage", "excerpt"],
+//     `_${directory}`
+//   );
 
-  return {
-    props: { allPosts, directory },
-  };
-};
+//   return {
+//     props: { allPosts, directory },
+//   };
+// };
