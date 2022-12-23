@@ -8,7 +8,7 @@ const Navbar = () => {
     { menuName: "Education", path: "/education" },
     { menuName: "Politics", path: "/politics" },
     { menuName: "Sports", path: "/sports" },
-    { menuName: "Gadgets", path: "/gadget" },
+    { menuName: "Gadgets", path: "/gadgets" },
   ];
   return (
     <>

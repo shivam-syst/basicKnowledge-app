@@ -57,14 +57,18 @@ type Params = {
   };
 };
 
-export async function getStaticPaths() {
-  const posts = getAllPosts(["slug", "category"], "_education");
+export async function getStaticPaths({ queryParams }) {
+  const router = useRouter();
+  const category = router.query.category as string;
+  const slug = router.query.slug as string;
+  const posts = getAllPosts(["slug"], "_education");
   console.log("posts", posts);
+  console.log(category, slug);
   return {
     paths: posts.map((post) => {
       return {
         params: {
-          category: `${post.category}`,
+          category: queryParams,
           slug: post.slug,
         },
       };

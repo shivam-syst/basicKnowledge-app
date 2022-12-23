@@ -5,7 +5,7 @@ import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import Post from "../../interfaces/post";
 
-const directory = "_sports";
+const directory = "_gadgets";
 
 type Props = {
   allPosts: Post[];
@@ -19,7 +19,7 @@ export default function Index({ allPosts }: Props) {
           <title> All posts</title>
         </Head>
         <Container>
-          {allPosts.length > 0 && <AllStories posts={allPosts} dir="sports" />}
+          {allPosts.length > 0 && <AllStories posts={allPosts} dir="gadgets" />}
         </Container>
       </Layout>
     </>

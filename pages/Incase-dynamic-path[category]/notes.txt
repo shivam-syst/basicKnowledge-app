@@ -1,0 +1,4 @@
+To enable dynamic path generation, 
+  - rename the folder from 'Incase-dynamic-path[category]' to [category];
+  - rename the file index-ignore to index.tsx
+  - There are some errors related to 2 level dynamic path generation, Fix them.

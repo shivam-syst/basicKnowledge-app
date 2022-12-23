@@ -5,6 +5,8 @@ import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import Post from "../../interfaces/post";
 
+const directory = "_posts";
+
 type Props = {
   allPosts: Post[];
 };
@@ -25,7 +27,6 @@ export default function Index({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const directory = "_posts";
   const allPosts = getAllPosts(
     ["title", "date", "slug", "author", "coverImage", "excerpt"],
     directory
