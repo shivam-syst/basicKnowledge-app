@@ -2,9 +2,6 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
-// const postsDirectory = join(process.cwd(), "_posts");
-// const sportsDirectory = join(process.cwd(), "_sports");
-
 export function getPostSlugs(directory: string) {
   return fs.readdirSync(directory);
 }
@@ -43,7 +40,7 @@ export function getPostBySlug(
 }
 
 export function getAllPosts(fields: string[] = [], directory: string = "") {
-  const finalDirectory = join(process.cwd(), directory);
+  const finalDirectory = join(process.cwd(), "_AllPosts", directory);
   const slugs = getPostSlugs(finalDirectory);
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields, finalDirectory))
