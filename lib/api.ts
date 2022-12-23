@@ -1,6 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import Post from "../interfaces/post";
 
 export function getPostSlugs(directory: string) {
   return fs.readdirSync(directory);
@@ -12,7 +13,7 @@ export function getPostBySlug(
   directory: string
 ) {
   const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(directory, `${realSlug}.md`);
+  const fullPath = join(`_AllPosts/${directory}`, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
@@ -43,8 +44,12 @@ export function getAllPosts(fields: string[] = [], directory: string = "") {
   const finalDirectory = join(process.cwd(), "_AllPosts", directory);
   const slugs = getPostSlugs(finalDirectory);
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields, finalDirectory))
+    .map((slug) => getPostBySlug(slug, fields, directory))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
+}
+
+export function getFeaturedPosts(posts) {
+  return posts.filter((post) => post.featured);
 }
