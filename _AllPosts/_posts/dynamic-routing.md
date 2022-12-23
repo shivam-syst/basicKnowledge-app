@@ -10,7 +10,6 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover-unsplash.jpg"
 ---
 
-
 # About me
 
 Hi MY name is **Shivam Kumar** consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.
@@ -19,10 +18,10 @@ Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel
 1. First item
 2. Second item
 3. Third item
-4. Fourth item 
+4. Fourth item
 
 -This is unordered list
-  -nested
+-nested
 -This is another item
 
 `<div>HI</div>`
@@ -33,7 +32,7 @@ Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidu
 
 ![Image](https://images.unsplash.com/photo-1671455639942-15914d797644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60 "a title")
 
-![Image](https://imgd.aeplcdn.com/1280x720/n/cw/ec/102709/ntorq-125-right-front-three-quarter.jpeg?isig=0&q=80 "a title")
+![Image](/assets/blog/dynamic-routing/cover-unsplash.jpg "a title")
 
 ## Lorem Ipsum
 
