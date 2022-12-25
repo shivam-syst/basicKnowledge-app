@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -19,10 +20,16 @@ const Navbar = () => {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
+              className="text-sm font-bold leading-relaxed flex items-center mr-4 py-2 whitespace-nowrap uppercase text-black"
               href="/"
             >
-              [LOGO]Basic Knowledege
+              <Image
+                src="/favicon/logo2.png"
+                alt="logo2"
+                height={50}
+                width={50}
+              />
+              <div>Basic Knowledge</div>
             </Link>
             <button
               className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

@@ -8,6 +8,7 @@ author:
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover-unsplash.jpg"
+featured: true
 ---
 
 # sport 1

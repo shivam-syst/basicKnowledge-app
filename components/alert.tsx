@@ -1,6 +1,6 @@
 import Container from "./container";
 import cn from "classnames";
-import { EXAMPLE_PATH } from "../lib/constants";
+import { YOUTUBE_LINK } from "../lib/constants";
 
 type Props = {
   preview?: boolean;
@@ -17,7 +17,7 @@ const Alert = ({ preview }: Props) => {
       <Container>
         <div className="py-2 text-center text-sm">
           Visit Our Youtube Channel:&nbsp;
-          <a href="https://www.youtube.com" className="underline">
+          <a href={YOUTUBE_LINK} className="underline">
             Youtube
           </a>
         </div>

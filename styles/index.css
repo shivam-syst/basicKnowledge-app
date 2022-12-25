@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --my-theme-color: #8b008b;
+  --my-theme-color: #00aefd;
 }
 
 .cc__textColor {
@@ -24,4 +24,7 @@
 
 a {
   color: var(--my-theme-color);
+}
+a:hover {
+  text-decoration: underline;
 }
