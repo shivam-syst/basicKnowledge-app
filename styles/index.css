@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --my-theme-color: #8b008b;
+}
+
+.cc__textColor {
+  color: var(--my-theme-color);
+}
+
+.cc__bgColor {
+  background-color: var(--my-theme-color);
+}
+
+.cc__borderColor {
+  border: solid var(--my-theme-color);
+}
+
+a {
+  color: var(--my-theme-color);
+}

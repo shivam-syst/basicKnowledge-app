@@ -4,11 +4,11 @@ import Link from "next/link";
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const MENUS = [
-    { menuName: "All Posts", path: "/posts" },
-    { menuName: "Education", path: "/education" },
-    { menuName: "Politics", path: "/politics" },
-    { menuName: "Sports", path: "/sports" },
-    { menuName: "Gadgets", path: "/gadgets" },
+    { id: 1, menuName: "All Posts", path: "/posts" },
+    { id: 2, menuName: "Education", path: "/education" },
+    { id: 3, menuName: "Politics", path: "/politics" },
+    { id: 4, menuName: "Sports", path: "/sports" },
+    { id: 5, menuName: "Gadgets", path: "/gadgets" },
   ];
   return (
     <>
@@ -63,9 +63,9 @@ const Navbar = () => {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               {MENUS.map((menu) => {
                 return (
-                  <li className="nav-item">
+                  <li className="nav-item" key={menu.id}>
                     <Link
-                      className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                      className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-60`}
                       href={menu.path}
                     >
                       <span className="ml-2">{menu.menuName}</span>

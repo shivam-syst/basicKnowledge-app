@@ -1,11 +1,12 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
+import Button from "../components/button";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts, getFeaturedPosts } from "../lib/api";
 import Head from "next/head";
 import Post from "../interfaces/post";
+import MoreStories from "../components/more-stories";
 
 type Props = {
   allPosts: Post[];
@@ -22,7 +23,7 @@ export default function Index({ allPosts, featuredPosts }: Props) {
           <title> Blog Example</title>
         </Head>
         <Container>
-          <Intro />
+          <Intro text={heroPost.title} />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
