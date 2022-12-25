@@ -18,6 +18,10 @@
   border: solid var(--my-theme-color);
 }
 
+.cc__navLink__active {
+  color: var(--my-theme-color);
+}
+
 a {
   color: var(--my-theme-color);
 }

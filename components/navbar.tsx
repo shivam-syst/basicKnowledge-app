@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const router = useRouter();
   const MENUS = [
+    { id: 0, menuName: "Home", path: "/" },
     { id: 1, menuName: "All Posts", path: "/posts" },
     { id: 2, menuName: "Education", path: "/education" },
     { id: 3, menuName: "Politics", path: "/politics" },
@@ -65,7 +68,13 @@ const Navbar = () => {
                 return (
                   <li className="nav-item" key={menu.id}>
                     <Link
-                      className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-60`}
+                      className={`px-3 py-2 flex items-center uppercase font-bold leading-snug text-black hover:opacity-60
+                      ${
+                        router.pathname == menu.path
+                          ? "cc__navLink__active"
+                          : ""
+                      }
+                      `}
                       href={menu.path}
                     >
                       <span className="ml-2">{menu.menuName}</span>
