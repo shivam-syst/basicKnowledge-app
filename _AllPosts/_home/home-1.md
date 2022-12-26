@@ -1,13 +1,13 @@
 ---
 title: "Home page post"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/dynamic-routing/cover-unsplash.jpg"
+coverImage: "/images/cover-unsplash.jpg"
 date: "2020-12-19"
 author:
   name: Shivam Kumar
   picture: "/assets/blog/authors/shivam.jpeg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/cover-unsplash.jpg"
+  url: "/images/cover-unsplash.jpg"
 featured: true
 ---
 
@@ -33,7 +33,7 @@ Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidu
 
 ![Image](https://images.unsplash.com/photo-1671455639942-15914d797644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60 "a title")
 
-![Image](/assets/blog/dynamic-routing/cover-unsplash.jpg "a title")
+![Image](/images/cover-unsplash.jpg "a title")
 
 ## Lorem Ipsum
 

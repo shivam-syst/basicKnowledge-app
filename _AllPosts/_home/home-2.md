@@ -1,13 +1,13 @@
 ---
 title: "HOME PAGE POST"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/dynamic-routing/cover-unsplash.jpg"
+coverImage: "/images/cover-unsplash.jpg"
 date: "2020-03-17"
 author:
   name: Rahul Kumar
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
+  url: "/images/cover1.jpg"
 featured: true
 ---
 

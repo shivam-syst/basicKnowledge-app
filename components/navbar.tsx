@@ -24,8 +24,8 @@ const Navbar = () => {
               href="/"
             >
               <Image
-                src="/favicon/logo2.png"
-                alt="logo2"
+                src="/favicon/logo.png"
+                alt="Logo"
                 height={50}
                 width={50}
               />

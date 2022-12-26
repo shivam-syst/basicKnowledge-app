@@ -1,25 +1,25 @@
 ---
 title: "FIFA 2022"
 excerpt: "Fédération Internationale de Football Association (French), meaning International Association Football Federation is the international governing body of association football,It was founded in 1904 to oversee international competition among the national associations of Belgium."
-coverImage: "/assets/blog/dynamic-routing/qfqlx60akp11awiwi0h4-jpg.jpg"
+coverImage: "/images/qfqlx60akp11awiwi0h4-jpg.jpg"
 date: "2022-12-21"
 author:
   name: Sudhansu
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/qfqlx60akp11awiwi0h4-jpg.jpg"
+  url: "/images/qfqlx60akp11awiwi0h4-jpg.jpg"
 featured: true
 ---
 
 # FIFA
 
- Fédération Internationale de Football Association (French), meaning International Association Football Federation is the international governing body of association football,It was founded in 1904 to oversee international competition among the national associations of Belgium, Denmark, France, Germany, the Netherlands, Spain, Sweden and Switzerland. But its membership now comprises 211 national associations. It was founded in 1904.Headquartered in Zürich, Switzerland,
+Fédération Internationale de Football Association (French), meaning International Association Football Federation is the international governing body of association football,It was founded in 1904 to oversee international competition among the national associations of Belgium, Denmark, France, Germany, the Netherlands, Spain, Sweden and Switzerland. But its membership now comprises 211 national associations. It was founded in 1904.Headquartered in Zürich, Switzerland,
 
 ## FIFA description
- Fédération Internationale de Football Association (French), meaning International Association Football Federation is the international governing body of association football,It was founded in 1904 to oversee international competition among the national associations of Belgium, Denmark, France, Germany, the Netherlands, Spain, Sweden and Switzerland. But its membership now comprises 211 national associations. It was founded in 1904.Headquartered in Zürich, Switzerland,
- 
-![Alt text](/assets/blog/dynamic-routing/qfqlx60akp11awiwi0h4-jpg.jpg "Fifa image")
 
+Fédération Internationale de Football Association (French), meaning International Association Football Federation is the international governing body of association football,It was founded in 1904 to oversee international competition among the national associations of Belgium, Denmark, France, Germany, the Netherlands, Spain, Sweden and Switzerland. But its membership now comprises 211 national associations. It was founded in 1904.Headquartered in Zürich, Switzerland,
+
+![Alt text](/images/qfqlx60akp11awiwi0h4-jpg.jpg "Fifa image")
 
 ![Fifa image](https://media.npr.org/assets/img/2022/12/07/gettyimages-1446537193_custom-7c247f501b33ecb2afd13f806fb49934cb3f97ed-s2600-c85.webp "Messi Image")
 
@@ -32,4 +32,3 @@ Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris 
 - asdf ha sjhf asf
 - ✨Magic ✨
 - Hurray!
-

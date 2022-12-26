@@ -17,7 +17,7 @@ export default function Index({ allPosts, featuredPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>Sports Posts</title>
+          <title>Sports | Basic Knowledge</title>
         </Head>
         <Container>
           {allPosts.length > 0 && (

@@ -1,13 +1,13 @@
 ---
 title: "dolore magna aliqua"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/images/cover3.jpg"
 date: "2022-12-20"
 author:
   name: Shivaa
   picture: "/assets/blog/authors/shivaa.jpeg"
 ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+  url: "/images/cover3.jpg"
 ---
 
 Preview, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

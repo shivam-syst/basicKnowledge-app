@@ -20,7 +20,7 @@ export default function Index({ allPosts, featuredPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title> Blog Example</title>
+          <title> Home | Basic Knowledge</title>
         </Head>
         <Container>
           <Intro text={heroPost.title} />
