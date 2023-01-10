@@ -11,9 +11,22 @@ import MoreStories from "../components/more-stories";
 type Props = {
   allPosts: Post[];
   featuredPosts?: Post[];
+  featuredEducationPosts?: Post[];
+  featuredSportsPosts?: Post[];
+  featuredPoliticsPosts?: Post[];
+  featuredGadgetsPosts?: Post[];
+  featuredGeneralPosts?: Post[];
 };
 
-export default function Index({ allPosts, featuredPosts }: Props) {
+export default function Index({
+  allPosts,
+  featuredPosts,
+  featuredEducationPosts,
+  featuredSportsPosts,
+  featuredPoliticsPosts,
+  featuredGadgetsPosts,
+  featuredGeneralPosts,
+}: Props) {
   const heroPost = featuredPosts[0] || allPosts[0];
   const morePosts = allPosts.slice(1, 5);
   return (
@@ -34,7 +47,22 @@ export default function Index({ allPosts, featuredPosts }: Props) {
               excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} dir="home" />}
+          {featuredEducationPosts.length > 0 && (
+            <MoreStories posts={featuredEducationPosts} dir="education" />
+          )}
+          {featuredSportsPosts.length > 0 && (
+            <MoreStories posts={featuredSportsPosts} dir="sports" />
+          )}
+          {featuredPoliticsPosts.length > 0 && (
+            <MoreStories posts={featuredPoliticsPosts} dir="politics" />
+          )}
+          {featuredGadgetsPosts.length > 0 && (
+            <MoreStories posts={featuredGadgetsPosts} dir="gadgets" />
+          )}
+          {featuredGeneralPosts.length > 0 && (
+            <MoreStories posts={featuredGeneralPosts} dir="posts" />
+          )}
         </Container>
       </Layout>
     </>
@@ -42,14 +70,46 @@ export default function Index({ allPosts, featuredPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const directory = "_home";
   const allPosts = getAllPosts(
     ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
-    directory
+    "_home"
+  );
+  const allEducationPosts = getAllPosts(
+    ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
+    "_education"
+  );
+  const allPoliticsPosts = getAllPosts(
+    ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
+    "_politics"
+  );
+  const allSportsPosts = getAllPosts(
+    ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
+    "_sports"
+  );
+  const allGadgetsPosts = getAllPosts(
+    ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
+    "_gadgets"
+  );
+  const allGeneralPosts = getAllPosts(
+    ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
+    "_posts"
   );
   const featuredPosts = getFeaturedPosts(allPosts);
+  const featuredEducationPosts = getFeaturedPosts(allEducationPosts);
+  const featuredPoliticsPosts = getFeaturedPosts(allPoliticsPosts);
+  const featuredSportsPosts = getFeaturedPosts(allSportsPosts);
+  const featuredGadgetsPosts = getFeaturedPosts(allGadgetsPosts);
+  const featuredGeneralPosts = getFeaturedPosts(allGeneralPosts);
 
   return {
-    props: { allPosts, featuredPosts },
+    props: {
+      allPosts,
+      featuredPosts,
+      featuredEducationPosts,
+      featuredSportsPosts,
+      featuredPoliticsPosts,
+      featuredGadgetsPosts,
+      featuredGeneralPosts,
+    },
   };
 };

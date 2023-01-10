@@ -5,13 +5,15 @@ import Button from "./button";
 
 type Props = {
   posts: Post[];
+  dir: string;
 };
 
-const MoreStories = ({ posts }: Props) => {
+const MoreStories = ({ posts, dir }: Props) => {
   return (
     <section>
       <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight cc__textColor">
-        Top Stories
+        Top {dir == "posts" ? "general" : dir == "home" ? "trending" : dir}{" "}
+        stories
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-8 mb-16">
         {posts.map((post) => (
@@ -23,10 +25,10 @@ const MoreStories = ({ posts }: Props) => {
             author={post.author}
             slug={post.slug}
             excerpt={post.excerpt}
-            dir={"home"}
+            dir={dir}
           />
         ))}
-        <Button text="More Storiess" link="/posts" />
+        {/* <Button text="More Storiess" link={`/${dir}`} /> */}
       </div>
     </section>
   );

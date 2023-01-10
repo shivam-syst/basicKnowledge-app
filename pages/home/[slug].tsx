@@ -10,6 +10,7 @@ import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
+import { WEBSITE_URL } from "../../lib/constants";
 
 const directory = "_home";
 
@@ -35,7 +36,12 @@ export default function Post({ post, morePosts, preview }: Props) {
             <article className="mb-32">
               <Head>
                 <title>{post.title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:description" content={post.excerpt} />
+                <meta
+                  property="og:image"
+                  content={`${WEBSITE_URL}${post.ogImage.url}`}
+                />
               </Head>
               <PostHeader
                 title={post.title}
@@ -61,7 +67,16 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(
     params.slug,
-    ["title", "date", "slug", "author", "content", "ogImage", "coverImage"],
+    [
+      "title",
+      "date",
+      "slug",
+      "author",
+      "content",
+      "ogImage",
+      "coverImage",
+      "excerpt",
+    ],
     directory
   );
   const content = await markdownToHtml(post.content || "");

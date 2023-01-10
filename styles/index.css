@@ -28,3 +28,35 @@ a {
 /* a:hover {
   text-decoration: underline;
 } */
+
+/* Stylings for Static pages such as Privacy policy, about-us, contact us */
+.staticPage h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.staticPage h2 {
+  font-size: 1.875rem /* 30px */;
+  line-height: 2.25rem /* 36px */;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.staticPage h3 {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.staticPage ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.staticPage ol {
+  list-style-type: lower-roman;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}

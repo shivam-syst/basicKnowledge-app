@@ -2,18 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { MENUS } from "../lib/constants";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const router = useRouter();
-  const MENUS = [
-    { id: 0, menuName: "Home", path: "/" },
-    { id: 1, menuName: "All Posts", path: "/posts" },
-    { id: 2, menuName: "Education", path: "/education" },
-    { id: 3, menuName: "Politics", path: "/politics" },
-    { id: 4, menuName: "Sports", path: "/sports" },
-    { id: 5, menuName: "Gadgets", path: "/gadgets" },
-  ];
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-100 mb-3">
