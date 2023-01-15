@@ -9,7 +9,7 @@ import Post from "../interfaces/post";
 import MoreStories from "../components/more-stories";
 
 type Props = {
-  allPosts: Post[];
+  allHomePosts: Post[];
   featuredPosts?: Post[];
   featuredEducationPosts?: Post[];
   featuredSportsPosts?: Post[];
@@ -19,7 +19,7 @@ type Props = {
 };
 
 export default function Index({
-  allPosts,
+  allHomePosts,
   featuredPosts,
   featuredEducationPosts,
   featuredSportsPosts,
@@ -27,8 +27,8 @@ export default function Index({
   featuredGadgetsPosts,
   featuredGeneralPosts,
 }: Props) {
-  const heroPost = featuredPosts[0] || allPosts[0];
-  const morePosts = allPosts.slice(1, 5);
+  const heroPost = featuredPosts[0] || allHomePosts[0];
+  const morePosts = allHomePosts.slice(1);
   return (
     <>
       <Layout>
@@ -70,7 +70,7 @@ export default function Index({
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(
+  const allHomePosts = getAllPosts(
     ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
     "_home"
   );
@@ -94,16 +94,16 @@ export const getStaticProps = async () => {
     ["title", "date", "slug", "author", "coverImage", "excerpt", "featured"],
     "_posts"
   );
-  const featuredPosts = getFeaturedPosts(allPosts);
-  const featuredEducationPosts = getFeaturedPosts(allEducationPosts);
-  const featuredPoliticsPosts = getFeaturedPosts(allPoliticsPosts);
-  const featuredSportsPosts = getFeaturedPosts(allSportsPosts);
-  const featuredGadgetsPosts = getFeaturedPosts(allGadgetsPosts);
-  const featuredGeneralPosts = getFeaturedPosts(allGeneralPosts);
+  const featuredPosts = getFeaturedPosts(allHomePosts).slice(0, 5);
+  const featuredEducationPosts = getFeaturedPosts(allEducationPosts).slice(0,4);
+  const featuredPoliticsPosts = getFeaturedPosts(allPoliticsPosts).slice(0, 4);
+  const featuredSportsPosts = getFeaturedPosts(allSportsPosts).slice(0, 4);
+  const featuredGadgetsPosts = getFeaturedPosts(allGadgetsPosts).slice(0, 4);
+  const featuredGeneralPosts = getFeaturedPosts(allGeneralPosts).slice(0, 4);
 
   return {
     props: {
-      allPosts,
+      allHomePosts,
       featuredPosts,
       featuredEducationPosts,
       featuredSportsPosts,
